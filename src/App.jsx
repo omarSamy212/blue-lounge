@@ -1,18 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
-import InstafoodHome from "./components/instafood/InstafoodHome";
-
+// BlueLounge Components
+import BlueLoungeUltraFancy from "./components/Bluelounge/BlueLoungeHome";
 import About from "./components/Bluelounge/About";
 import ContactUs from "./components/Bluelounge/Contact";
 import Services from "./components/Bluelounge/Services";
+
+// Instafood Components
+import InstafoodHome from "./components/instafood/InstafoodHome";
 import InstaFoodServices from "./components/instafood/Servicesinsta";
 import InstaFoodAbout from "./components/instafood/InstaAbout";
 import InstaFoodContact from "./components/instafood/InstaContacts";
-import BlueLoungeUltraFancy from "./components/Bluelounge/BlueLoungeHome";
-import Landing from "./components/landing/Landing";
 
-
+// Landing Page
+import Landing from "./components/landing/Landing"; // تأكد اسم المجلد صح وبدون مسافة
 
 function App() {
   return (
