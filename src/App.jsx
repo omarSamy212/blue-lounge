@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/" element={<BlueLoungeUltraFancy />} />
+        <Route path="/b" element={<BlueLoungeUltraFancy />} />
         <Route path="/i" element={<InstafoodHome />} />
         <Route path="/a" element={<About />} />
         <Route path="/c" element={<ContactUs />} />
