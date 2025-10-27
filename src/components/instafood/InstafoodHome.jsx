@@ -3,12 +3,12 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const sliderImages = [
-  "/public/assets/photo_6037353301298318157_y.jpg",
-  "/public/assets/photo_6037353301298318158_y.jpg",
-  "/public/assets/photo_6037353301298318159_y.jpg",
+  "/assets/photo_6037353301298318157_y.jpg",
+  "/assets/photo_6037353301298318158_y.jpg",
+  "/assets/photo_6037353301298318159_y.jpg",
 ];
 
-const backgroundImage = "/public/assets/photo_6048839933633432618_y.jpg";
+const backgroundImage = "/assets/photo_6048839933633432618_y.jpg";
 
 export default function InstaFoodHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,7 +21,7 @@ export default function InstaFoodHome() {
   }, []);
 
   const handlePdfClick = () => {
-    const pdfUrl = "/public/assets/menu.pdf";
+    const pdfUrl = "/assets/menu.pdf";
     window.open(pdfUrl, "_blank");
   };
 
@@ -178,17 +178,17 @@ export default function InstaFoodHome() {
             {
               title: "Healthy Food",
               desc: "Nutritious, calorie-counted meals crafted with expert care.",
-              img: "/public/assets/photo_6037353301298318109_y.jpg",
+              img: "/assets/photo_6037353301298318109_y.jpg",
             },
             {
               title: "Bakery",
               desc: "Fresh breads and pastries made daily to perfection.",
-              img: "/public/assets/photo_6037353301298318135_y.jpg",
+              img: "/assets/photo_6037353301298318135_y.jpg",
             },
             {
               title: "Event Catering",
               desc: "Memorable catering experiences for all occasions.",
-              img: "/public/assets/photo_6037353301298318110_y.jpg",
+              img: "/assets/photo_6037353301298318110_y.jpg",
             },
           ].map((service, i) => (
             <motion.div
