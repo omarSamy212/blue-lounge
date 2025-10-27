@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 import InstafoodHome from "./components/instafood/InstafoodHome";
-import Landing from "./components/landing";
+
 import About from "./components/Bluelounge/About";
 import ContactUs from "./components/Bluelounge/Contact";
 import Services from "./components/Bluelounge/Services";
@@ -10,6 +10,7 @@ import InstaFoodServices from "./components/instafood/Servicesinsta";
 import InstaFoodAbout from "./components/instafood/InstaAbout";
 import InstaFoodContact from "./components/instafood/InstaContacts";
 import BlueLoungeUltraFancy from "./components/Bluelounge/BlueLoungeHome";
+import Landing from "./components/landing";
 
 
 
@@ -17,7 +18,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing/>} />
             <Route path="/" element={<BlueLoungeUltraFancy />} />
         <Route path="/i" element={<InstafoodHome />} />
         <Route path="/a" element={<About />} />
