@@ -10,7 +10,7 @@ import InstaFoodServices from "./components/instafood/Servicesinsta";
 import InstaFoodAbout from "./components/instafood/InstaAbout";
 import InstaFoodContact from "./components/instafood/InstaContacts";
 import BlueLoungeUltraFancy from "./components/Bluelounge/BlueLoungeHome";
-import Landing from "./components/landing";
+import Landing from "./components/landing/Landing";
 
 
 
@@ -18,15 +18,15 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Landing/>} />
-            <Route path="/" element={<BlueLoungeUltraFancy />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<BlueLoungeUltraFancy />} />
         <Route path="/i" element={<InstafoodHome />} />
         <Route path="/a" element={<About />} />
         <Route path="/c" element={<ContactUs />} />
         <Route path="/s" element={<Services />} />
         <Route path="/si" element={<InstaFoodServices />} />
         <Route path="/k" element={<InstaFoodAbout />} />
-        <Route path="/di"element={<InstaFoodContact/>}/>
+        <Route path="/di" element={<InstaFoodContact />} />
       </Routes>
     </Router>
   );
