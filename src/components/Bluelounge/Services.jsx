@@ -11,31 +11,31 @@ const services = [
     title: "Healthy Food",
     shortDesc: "Nutritious, balanced meals curated by experts.",
     details: "Fresh, healthy meals with calorie control plans specially tailored for you by certified nutritionists.",
-    image: "src/assets/photo_6037353301298318157_y.jpg",
+    image: "public/assets/photo_6037353301298318157_y.jpg",
   },
   {
     title: "Economical Meals",
     shortDesc: "Great taste with budget-friendly pricing.",
     details: "Delicious economical options that provide value without compromising on quality or flavor.",
-    image: "src/assets/photo_6037353301298318110_y.jpg",
+    image: "public/assets/photo_6037353301298318110_y.jpg",
   },
   {
     title: "Bakery",
     shortDesc: "Freshly baked breads and sweets.",
     details: "From artisan breads to delightful pastries, all baked fresh daily using premium ingredients.",
-    image: "src/assets/photo_6037353301298318111_y.jpg",
+    image: "public/assets/photo_6037353301298318111_y.jpg",
   },
   {
     title: "Frozen Food",
     shortDesc: "Quality frozen meals for easy cooking.",
     details: "Ready-to-cook frozen meals that maintain the taste and freshness of home-cooked food.",
-    image: "src/assets/photo_6048839933633432617_y.jpg",
+    image: "public/assets/photo_6048839933633432617_y.jpg",
   },
   {
     title: "Event Catering",
     shortDesc: "Tailored catering for memorable moments.",
     details: "Professional catering services for events of all sizes, creating unforgettable culinary experiences.",
-    image: "src/assets/photo_6037353301298318110_y.jpg",
+    image: "public/assets/photo_6037353301298318110_y.jpg",
   },
 ];
 

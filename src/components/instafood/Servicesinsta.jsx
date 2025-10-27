@@ -7,27 +7,27 @@ const servicesIndividuals = [
   {
     title: "Healthy Food",
     desc: "Enjoy nutritious, calorie-counted meals tailored to your dietary needs. Collaborating with nutritionists, we provide weekly, monthly, and quarterly food deliveries to support your well-being.",
-    img: "src/assets/photo_6037353301298318109_y.jpg",
+    img: "public/assets/photo_6037353301298318109_y.jpg",
   },
   {
     title: "Economical Meals",
     desc: "Satisfying and budget-friendly meals aimed at workers and individuals with limited resources. Delicious options that warm the soul without breaking the bank.",
-    img: "src/assets/photo_6037353301298318110_y.jpg",
+    img: "public/assets/photo_6037353301298318110_y.jpg",
   },
   {
     title: "Bakery",
     desc: "From fresh bread that calms the soul to sweet pastries that brighten your day — every bite is made with love and care, crafted to perfection.",
-    img: "src/assets/photo_6037353301298318135_y.jpg",
+    img: "public/assets/photo_6037353301298318135_y.jpg",
   },
   {
     title: "Frozen Food",
     desc: "Enjoy the convenience of half-cooked frozen meals — perfect for quick and easy home dining. Our frozen food options offer a variety of delicious choices.",
-    img: "src/assets/photo_6048839933633432617_y.jpg",
+    img: "public/assets/photo_6048839933633432617_y.jpg",
   },
   {
     title: "Event Catering",
     desc: "Our expert catering services make your events unforgettable. Birthdays, anniversaries, or corporate gatherings — we craft memories with flavor and style.",
-    img: "src/assets/photo_6037353301298318110_y.jpg",
+    img: "public/assets/photo_6037353301298318110_y.jpg",
   },
 ];
 
@@ -35,22 +35,22 @@ const servicesCorporate = [
   {
     title: "Corporate Catering",
     desc: "Comprehensive catering solutions for businesses, including cafeteria management, event catering, and more. We ensure employees enjoy fresh, nutritious meals efficiently on-site.",
-    img: "src/assets/photo_6037353301298318110_y.jpg",
+    img: "public/assets/photo_6037353301298318110_y.jpg",
   },
   {
     title: "School Meal Solutions",
     desc: "Specialized catering for schools focusing on health, variety, and adaptability. Locally sourced ingredients and customizable menus ensure quality and freshness for every student.",
-    img: "src/assets/photo_6037353301298318158_y.jpg",
+    img: "public/assets/photo_6037353301298318158_y.jpg",
   },
   {
     title: "University Catering",
     desc: "Dedicated catering services for universities like Nile University — tailored to the diverse needs of students and staff with balanced, energizing meals.",
-    img: "src/assets/photo_6037353301298318159_y.jpg",
+    img: "public/assets/photo_6037353301298318159_y.jpg",
   },
   {
     title: "Banker Meals",
     desc: "Nutritious meals designed for bankers — fueling focus and productivity throughout the workday with convenient, high-quality food options.",
-    img: "src/assets/photo_6037353301298318108_y.jpg",
+    img: "public/assets/photo_6037353301298318108_y.jpg",
   },
 ];
 

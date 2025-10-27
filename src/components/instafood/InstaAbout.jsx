@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 
 const aboutImages = [
-  "src/assets/photo_6037353301298318109_y.jpg",
-  "src/assets/photo_6037353301298318110_y.jpg",
-  "src/assets/photo_6037353301298318135_y.jpg",
+  "public/assets/photo_6037353301298318109_y.jpg",
+  "public/assets/photo_6037353301298318110_y.jpg",
+  "public/assets/photo_6037353301298318135_y.jpg",
 ];
 
 export default function InstaFoodAbout() {
@@ -30,7 +30,7 @@ export default function InstaFoodAbout() {
         >
           Instafood
         </h1>
-        <nav className="flex gap-8 font-semibold text-sm md:text-base">
+        <nav className="flex gap-8 text-sm font-semibold md:text-base">
           <a href="/" className="hover:text-[#b08d57] transition">Home</a>
           <a href="/s" className="hover:text-[#b08d57] transition">Services</a>
           <a href="/a" className="text-[#b08d57] underline underline-offset-4">About</a>
@@ -68,7 +68,7 @@ export default function InstaFoodAbout() {
       </section>
 
       {/* OUR STORY */}
-      <section className="max-w-5xl mx-auto mt-24 px-6 md:px-12 text-center">
+      <section className="max-w-5xl px-6 mx-auto mt-24 text-center md:px-12">
         <motion.div
           className="bg-white/5 border border-[#b08d57]/30 backdrop-blur-md rounded-3xl p-10 shadow-[0_0_20px_rgba(176,141,87,0.2)]"
           initial={{ opacity: 0, y: 40 }}
@@ -82,14 +82,14 @@ export default function InstaFoodAbout() {
           >
             Our Story
           </h2>
-          <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
+          <p className="mb-6 text-lg leading-relaxed text-gray-200 md:text-xl">
             In 2023, “Instafood” was established, embarking on a new journey to
             provide “El-Hilty” meals, catering services, and manage corporate
             and school cafeterias. With a new independent management team and a
             commitment to continuous improvement, Instafood quickly became
             synonymous with quality and innovation in food service.
           </p>
-          <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+          <p className="text-lg leading-relaxed text-gray-200 md:text-xl">
             Our mission is to deliver nutritious and delicious meals while
             maintaining exceptional service standards. With passion, precision,
             and a deep dedication to customer satisfaction, every meal we serve
@@ -99,7 +99,7 @@ export default function InstaFoodAbout() {
       </section>
 
       {/* VISION & MISSION */}
-      <section className="max-w-6xl mx-auto mt-32 px-6 md:px-12">
+      <section className="max-w-6xl px-6 mx-auto mt-32 md:px-12">
         <motion.h2
           className="text-5xl font-dancing text-center text-[#b08d57] mb-16"
           initial={{ opacity: 0 }}
@@ -109,7 +109,7 @@ export default function InstaFoodAbout() {
           Vision & Mission
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {[
             {
               title: "Our Vision",
@@ -134,7 +134,7 @@ export default function InstaFoodAbout() {
               >
                 {card.title}
               </h3>
-              <p className="text-gray-300 text-lg leading-relaxed font-poppins">
+              <p className="text-lg leading-relaxed text-gray-300 font-poppins">
                 {card.desc}
               </p>
             </motion.div>
@@ -143,14 +143,14 @@ export default function InstaFoodAbout() {
       </section>
 
       {/* GALLERY */}
-      <section className="max-w-6xl mx-auto mt-32 text-center px-6 md:px-12">
+      <section className="max-w-6xl px-6 mx-auto mt-32 text-center md:px-12">
         <h2
           className="text-5xl md:text-6xl font-dancing mb-14 text-[#b08d57]"
           style={{ fontFamily: "'Dancing Script', cursive" }}
         >
           Instafood Moments
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
           {aboutImages.map((img, i) => (
             <motion.div
               key={i}
@@ -160,14 +160,14 @@ export default function InstaFoodAbout() {
               <img
                 src={img}
                 alt={`gallery-${i}`}
-                className="w-full h-64 object-cover hover:opacity-90 transition"
+                className="object-cover w-full h-64 transition hover:opacity-90"
               />
             </motion.div>
           ))}
         </div>
       </section>
 
-    <footer className="bg-black bg-opacity-90 border-t border-white/20 py-10 mt-32 text-center text-white/70 text-sm">
+    <footer className="py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
         <h3 className="text-[#b08d57] text-lg font-dancing mb-6" style={{ fontFamily: "'Dancing Script', cursive" }}>
           Follow us for daily food inspirations 🍽️
         </h3>
@@ -181,7 +181,7 @@ export default function InstaFoodAbout() {
             className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125"
             title="Chat on WhatsApp"
           >
-            <i className="fab fa-whatsapp text-2xl"></i>
+            <i className="text-2xl fab fa-whatsapp"></i>
           </a>
 
           {/* Facebook */}
@@ -192,7 +192,7 @@ export default function InstaFoodAbout() {
             className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125"
             title="Visit our Facebook"
           >
-            <i className="fab fa-facebook-f text-2xl"></i>
+            <i className="text-2xl fab fa-facebook-f"></i>
           </a>
 
           {/* Gmail */}
@@ -201,7 +201,7 @@ export default function InstaFoodAbout() {
             className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125"
             title="Send us an Email"
           >
-            <i className="fas fa-envelope text-2xl"></i>
+            <i className="text-2xl fas fa-envelope"></i>
           </a>
         </div>
 

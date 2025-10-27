@@ -3,31 +3,31 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const sliderImages = [
-  "src/assets/photo_6037353301298318157_y.jpg",
-  "src/assets/photo_6037353301298318158_y.jpg",
-  "src/assets/photo_6037353301298318159_y.jpg",
+  "public/assets/photo_6037353301298318157_y.jpg",
+  "public/assets/photo_6037353301298318158_y.jpg",
+  "public/assets/photo_6037353301298318159_y.jpg",
 ];
 
-const backgroundImage = "src/assets/photo_6037353301298318108_y.jpg";
+const backgroundImage = "public/assets/photo_6037353301298318108_y.jpg";
 
 const dishes = [
   {
     id: 1,
     name: "Signature Salad",
     desc: "Fresh mushrooms, walnuts, strawberries, and aged cheese, perfectly balanced for a nutritious delight.",
-    img: "src/assets/photo_6037353301298318109_y.jpg",
+    img: "public/assets/photo_6037353301298318109_y.jpg",
   },
   {
     id: 2,
     name: "Bakery",
     desc: "Handcrafted breads and pastries made fresh daily using traditional methods for authentic flavor.",
-    img: "src/assets/photo_6037353301298318135_y.jpg",
+    img: "public/assets/photo_6037353301298318135_y.jpg",
   },
   {
     id: 3,
     name: "Contemporary Veggie",
     desc: "A vibrant combination of cucumber, olives, and crunchy vegetables designed for health-conscious food lovers.",
-    img: "src/assets/photo_6037353301298318110_y.jpg",
+    img: "public/assets/photo_6037353301298318110_y.jpg",
   },
 ];
 
@@ -217,7 +217,7 @@ export default function BlueLoungeUltraFancy() {
         id="our-story"
         className="relative max-w-5xl mx-auto mt-12 p-8 sm:p-12 rounded-3xl bg-gradient-to-tr from-gray-800 via-black to-gray-900 shadow-[0_0_40px_rgba(255,255,255,0.1)] border border-white/20"
       >
-        <div className="absolute inset-0 -z-10 opacity-20 rounded-3xl bg-[url('src/assets/photo_6037353301298318110_y.jpg')] bg-cover bg-center filter blur-lg" />
+        <div className="absolute inset-0 -z-10 opacity-20 rounded-3xl bg-[url('public/assets/photo_6037353301298318110_y.jpg')] bg-cover bg-center filter blur-lg" />
         <h2
           className="relative mb-6 text-3xl font-extrabold tracking-wide text-center text-white sm:mb-8 sm:text-5xl font-dancing-script"
           style={{ fontFamily: "'Dancing Script', cursive" }}
