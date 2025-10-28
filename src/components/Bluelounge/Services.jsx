@@ -60,7 +60,7 @@ function Header({ onBack }) {
       <button
         onClick={onBack}
         aria-label="Back"
-        className="absolute p-2 text-yellow-400 rounded-full shadow-md left-5 hover:bg-yellow-400/20"
+        className="absolute p-2 text-yellow-700 rounded-full shadow-md left-5 hover:bg-yellow-400/20"
       >
         <FiArrowLeft size={26} />
       </button>
@@ -80,7 +80,7 @@ function Footer() {
   return (
 <footer className="py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
   <h3
-    className="text-[#b08d57] text-lg font-dancing mb-6"
+    className="text-[#885d1d] text-lg font-dancing mb-6"
     style={{ fontFamily: "'Dancing Script', cursive" }}
   >
     Follow us for daily food inspirations 🍽️
@@ -139,7 +139,7 @@ export default function ServicesPage() {
             key={index}
             layout
             whileHover={{ scale: 1.05, boxShadow: "0 0 36px 6px #FEF08AAA" }}
-            className="flex flex-col overflow-hidden transition-all border shadow-2xl cursor-pointer bg-gradient-to-br from-black via-gray-900 to-gray-800 rounded-3xl border-yellow-400/40 hover:border-yellow-500"
+            className="flex flex-col overflow-hidden transition-all border shadow-2xl cursor-pointer bg-gradient-to-br from-black via-gray-900 to-gray-800 rounded-3xl border-yellow-400/40 hover:border-yellow-700"
             onClick={() => setSelected(index)}
             tabIndex={0}
           >
@@ -152,9 +152,9 @@ export default function ServicesPage() {
               />
             </div>
             <div className="flex flex-col flex-1 p-6">
-              <h3 className="mb-2 text-xl font-semibold text-yellow-300">{service.title}</h3>
+              <h3 className="mb-2 text-xl font-semibold text-yellow-500">{service.title}</h3>
               <p className="flex-1 text-sm text-yellow-400">{service.shortDesc}</p>
-              <button className="py-3 mt-4 text-lg font-bold text-black transition bg-yellow-400 rounded-full shadow-md hover:bg-yellow-300">
+              <button className="py-3 mt-4 text-lg font-bold text-black transition bg-yellow-500 rounded-full shadow-md hover:bg-yellow-600">
                 Details
               </button>
             </div>
@@ -180,7 +180,7 @@ export default function ServicesPage() {
           </div>
           <div className="flex flex-col flex-1 p-6">
             <h3 className="mb-2 text-xl font-semibold text-yellow-300">{services[4].title}</h3>
-            <p className="flex-1 text-yellow-400 text-md">{services[4].shortDesc}</p>
+            <p className="flex-1 text-yellow-500 text-md">{services[4].shortDesc}</p>
             <button className="py-3 mt-4 text-lg font-bold text-black transition bg-yellow-400 rounded-full shadow-md hover:bg-yellow-300">
               Details
             </button>
@@ -194,12 +194,12 @@ export default function ServicesPage() {
           <motion.div
             animate={{ scale: [1, 1.1, 1], rotate: [0, 9, -9, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="flex items-center px-6 py-4 shadow-lg bg-gradient-to-r from-yellow-400 to-yellow-200 rounded-2xl"
+            className="flex items-center px-6 py-4 shadow-lg bg-gradient-to-r from-yellow-700 to-yellow-200 rounded-2xl"
           >
             <FiStar className="text-2xl text-yellow-900" />
             <span className="pl-2 text-lg font-black tracking-wider text-black">Top Clients</span>
           </motion.div>
-          <h2 className="text-4xl font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 drop-shadow-xl">
+          <h2 className="text-4xl font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-yellow-800 via-yellow-400 to-yellow-500 drop-shadow-xl">
             OUR TOP CLIENTS
           </h2>
         </div>
@@ -226,7 +226,7 @@ export default function ServicesPage() {
                   width: 96,
                   height: 96,
                 }}
-                className="flex items-center justify-center transition-transform duration-300 bg-white border-4 border-yellow-200 rounded-full shadow-xl"
+                className="flex items-center justify-center transition-transform duration-300 bg-white border-4 border-yellow-700 rounded-full shadow-xl"
               >
                 <img
                   src={client.logo}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// eslint-disable-next-line no-unused-vars  
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const sliderImages = [
@@ -58,7 +58,7 @@ export default function BlueLoungeUltraFancy() {
   const mainTitle = "blue lounge";
 
   const handlePdfClick = () => {
-    const pdfUrl = "https://www.canva.com/design/DAG2V8omkRk/oWItFGvpFPkO_gVkbxX35A/edit";
+    const pdfUrl = "/InstaFood portfolio.pdf";
     window.open(pdfUrl, "_blank");
   };
 
@@ -76,13 +76,13 @@ export default function BlueLoungeUltraFancy() {
       {/* HEADER */}
       <header className="fixed inset-x-0 top-0 z-50 bg-black/70 backdrop-blur-[6px] border-b border-white/10 flex justify-between items-center px-4 sm:px-6 py-4">
         <div
-          className="text-xl font-extrabold tracking-tight uppercase select-none sm:text-2xl md:text-3xl font-dancing-script"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
+          className="text-xl font-extrabold tracking-tight uppercase select-none sm:text-2xl md:text-3xl"
+          style={{ fontFamily: "'Brush Script MT', cursive" }}
         >
           {mainTitle}
         </div>
         <nav className="flex space-x-4 text-sm font-semibold sm:space-x-6 md:text-base">
-          <a href="#" className="transition-colors hover:text-gray-300">Home</a>
+          <a href="/" className="transition-colors hover:text-gray-300">Landing</a>
           <a href="/s" className="transition-colors hover:text-gray-300">Services</a>
           <a href="/a" className="transition-colors hover:text-gray-300">About</a>
           <a href="/c" className="transition-colors hover:text-gray-300">Contact</a>
@@ -104,8 +104,8 @@ export default function BlueLoungeUltraFancy() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-black/96" />
         <div className="z-10 max-w-4xl pt-24 md:pt-36">
           <h1
-            className="mb-4 text-4xl font-extrabold tracking-widest uppercase sm:mb-6 sm:text-5xl md:text-7xl font-dancing-script"
-            style={{ fontFamily: "'Dancing Script', cursive" }}
+            className="mb-4 text-4xl font-extrabold tracking-widest uppercase sm:mb-6 sm:text-5xl md:text-7xl"
+            style={{ fontFamily: "'Brush Script MT', cursive" }}
           >
             {mainTitle}
           </h1>
@@ -240,41 +240,29 @@ export default function BlueLoungeUltraFancy() {
         </motion.p>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
+      {/* Footer */}
+      <footer className="relative py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/assets/photo_5764642634851879887_y.png"
+            alt="Blue Lounge Logo"
+            className="object-contain w-24 h-auto filter brightness-90 drop-shadow-lg"
+            style={{ maxWidth: "120px" }}
+          />
+        </div>
+
         <h3 className="text-[#b08d57] text-lg font-dancing mb-6" style={{ fontFamily: "'Dancing Script', cursive" }}>
           Follow us for daily food inspirations 🍽️
         </h3>
 
         <div className="flex justify-center gap-8 mb-6">
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/201001688655"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125"
-            title="Chat on WhatsApp"
-          >
+          <a href="https://wa.me/201001688655" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125" title="Chat on WhatsApp">
             <i className="text-2xl fab fa-whatsapp"></i>
           </a>
-
-          {/* Facebook */}
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125"
-            title="Visit our Facebook"
-          >
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125" title="Visit our Facebook">
             <i className="text-2xl fab fa-facebook-f"></i>
           </a>
-
-          {/* Gmail */}
-          <a
-            href="mailto:instafood@outlook.com"
-            className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125"
-            title="Send us an Email"
-          >
+          <a href="mailto:instafood@outlook.com" className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125" title="Send us an Email">
             <i className="text-2xl fas fa-envelope"></i>
           </a>
         </div>

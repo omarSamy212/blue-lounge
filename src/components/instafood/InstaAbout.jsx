@@ -21,28 +21,26 @@ export default function InstaFoodAbout() {
           .font-dancing { font-family: 'Dancing Script', cursive; }
         `}
       </style>
-
-      {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-[#b08d57]/20 flex justify-between items-center px-8 md:px-12 py-4">
-        <h1
-          className="text-3xl font-dancing text-[#b08d57] select-none"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
-        >
-          Instafood
-        </h1>
-        <nav className="flex gap-8 text-sm font-semibold md:text-base">
-          <a href="/" className="hover:text-[#b08d57] transition">Home</a>
-          <a href="/s" className="hover:text-[#b08d57] transition">Services</a>
-          <a href="/a" className="text-[#b08d57] underline underline-offset-4">About</a>
-          <a href="/c" className="hover:text-[#b08d57] transition">Contact</a>
-          <a
-            href="/"
-            className="ml-4 px-4 py-2 border border-[#b08d57]/50 rounded-full hover:bg-[#b08d57] hover:text-black transition text-sm"
-          >
-            Back to Home
-          </a>
-        </nav>
-      </header>
+<header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-[#b08d57]/20 flex flex-wrap justify-between items-center px-4 sm:px-8 md:px-12 py-4 gap-y-2">
+  <h1
+    className="flex-1 min-w-[150px] text-2xl sm:text-3xl md:text-4xl font-dancing text-[#b08d57] select-none"
+    style={{ fontFamily: "'Dancing Script', cursive" }}
+  >
+    Instafood
+  </h1>
+  <nav className="flex flex-wrap justify-center flex-1 gap-4 text-sm font-semibold basis-full md:basis-auto md:flex-auto md:gap-8 md:text-base md:justify-end">
+    <a href="/i" className="hover:text-[#b08d57] transition">Home</a>
+    <a href="/si" className="hover:text-[#b08d57] transition">Services</a>
+    <a href="/k" className="hover:text-[#b08d57] transition">About</a>
+    <a href="/di" className="text-[#b08d57] underline underline-offset-4">Contact</a>
+    <a
+      href="/"
+      className="ml-0 md:ml-4 px-4 py-2 border border-[#b08d57]/50 rounded-full hover:bg-[#b08d57] hover:text-black transition text-sm"
+    >
+      Back to landing
+    </a>
+  </nav>
+</header>
 
       <div className="h-24" />
 

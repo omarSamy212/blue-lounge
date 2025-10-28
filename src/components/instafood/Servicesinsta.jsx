@@ -88,10 +88,10 @@ export default function InstaFoodServices() {
             Contact
           </a>
           <a
-            href="/i"
+            href="/"
             className="px-4 py-2 ml-3 text-sm transition border rounded-full border-white/30 hover:bg-white hover:text-black"
           >
-            Back to Home
+            Back to landing
           </a>
         </nav>
       </header>

@@ -37,35 +37,27 @@ export default function InstaFoodContact() {
         `}
       </style>
 
-      {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-[#b08d57]/20 flex justify-between items-center px-8 md:px-12 py-4">
-        <h1
-          className="text-3xl font-dancing text-[#b08d57] select-none"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
-        >
-          Instafood
-        </h1>
-        <nav className="flex gap-8 font-semibold text-sm md:text-base">
-          <a href="/i" className="hover:text-[#b08d57] transition">
-            Home
-          </a>
-          <a href="/si" className="hover:text-[#b08d57] transition">
-            Services
-          </a>
-          <a href="/k" className="hover:text-[#b08d57] transition">
-            About
-          </a>
-          <a href="/di" className="text-[#b08d57] underline underline-offset-4">
-            Contact
-          </a>
-          <a
-            href="/i"
-            className="ml-4 px-4 py-2 border border-[#b08d57]/50 rounded-full hover:bg-[#b08d57] hover:text-black transition text-sm"
-          >
-            Back to Home
-          </a>
-        </nav>
-      </header>
+<header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-[#b08d57]/20 flex flex-wrap justify-between items-center px-4 sm:px-8 md:px-12 py-4 gap-y-2">
+  <h1
+    className="flex-1 min-w-[150px] text-2xl sm:text-3xl md:text-4xl font-dancing text-[#b08d57] select-none"
+    style={{ fontFamily: "'Dancing Script', cursive" }}
+  >
+    Instafood
+  </h1>
+  <nav className="flex flex-wrap justify-center flex-1 gap-4 text-sm font-semibold basis-full md:basis-auto md:flex-auto md:gap-8 md:text-base md:justify-end">
+    <a href="/i" className="hover:text-[#b08d57] transition">Home</a>
+    <a href="/si" className="hover:text-[#b08d57] transition">Services</a>
+    <a href="/k" className="hover:text-[#b08d57] transition">About</a>
+    <a href="/di" className="text-[#b08d57] underline underline-offset-4">Contact</a>
+    <a
+      href="/"
+      className="ml-0 md:ml-4 px-4 py-2 border border-[#b08d57]/50 rounded-full hover:bg-[#b08d57] hover:text-black transition text-sm"
+    >
+      Back to landing
+    </a>
+  </nav>
+</header>
+
 
       <div className="h-24" />
 
@@ -88,7 +80,7 @@ export default function InstaFoodContact() {
           LET’S CONNECT WITH US
         </motion.h1>
         <motion.p
-          className="text-gray-300 text-lg font-poppins mt-6 z-10 max-w-2xl"
+          className="z-10 max-w-2xl mt-6 text-lg text-gray-300 font-poppins"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -98,7 +90,7 @@ export default function InstaFoodContact() {
       </section>
 
       {/* CONTACT INFO */}
-      <main className="max-w-5xl mx-auto mt-20 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <main className="grid max-w-5xl grid-cols-1 gap-12 px-6 mx-auto mt-20 md:px-12 md:grid-cols-2">
         {contactInfo.map(({ icon, label, value, href }, i) => (
           <motion.div
             key={i}
@@ -132,7 +124,7 @@ export default function InstaFoodContact() {
       </main>
 
       {/* MAP SECTION */}
-      <section className="max-w-5xl mx-auto mt-24 px-6">
+      <section className="max-w-5xl px-6 mx-auto mt-24">
         <motion.div
           className="rounded-3xl overflow-hidden border border-[#b08d57]/30 shadow-[0_0_25px_rgba(176,141,87,0.15)]"
           initial={{ opacity: 0, y: 40 }}
@@ -157,13 +149,13 @@ export default function InstaFoodContact() {
         href="https://wa.me/201001688655"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 z-50"
+        className="fixed z-50 p-4 text-white transition-all bg-green-500 rounded-full shadow-lg bottom-6 right-6 hover:bg-green-600 hover:scale-110"
         title="Chat on WhatsApp"
       >
         <FaWhatsapp size={28} />
       </a>
 
-    <footer className="bg-black bg-opacity-90 border-t border-white/20 py-10 mt-32 text-center text-white/70 text-sm">
+    <footer className="py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
         <h3 className="text-[#b08d57] text-lg font-dancing mb-6" style={{ fontFamily: "'Dancing Script', cursive" }}>
           Follow us for daily food inspirations 🍽️
         </h3>
@@ -177,7 +169,7 @@ export default function InstaFoodContact() {
             className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125"
             title="Chat on WhatsApp"
           >
-            <i className="fab fa-whatsapp text-2xl"></i>
+            <i className="text-2xl fab fa-whatsapp"></i>
           </a>
 
           {/* Facebook */}
@@ -188,7 +180,7 @@ export default function InstaFoodContact() {
             className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125"
             title="Visit our Facebook"
           >
-            <i className="fab fa-facebook-f text-2xl"></i>
+            <i className="text-2xl fab fa-facebook-f"></i>
           </a>
 
           {/* Gmail */}
@@ -197,7 +189,7 @@ export default function InstaFoodContact() {
             className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125"
             title="Send us an Email"
           >
-            <i className="fas fa-envelope text-2xl"></i>
+            <i className="text-2xl fas fa-envelope"></i>
           </a>
         </div>
 

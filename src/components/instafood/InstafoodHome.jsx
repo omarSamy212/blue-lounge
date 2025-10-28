@@ -21,7 +21,7 @@ export default function InstaFoodHome() {
   }, []);
 
   const handlePdfClick = () => {
-    const pdfUrl = "/assets/menu.pdf";
+    const pdfUrl = "/InstaFood portfolio.pdf";
     window.open(pdfUrl, "_blank");
   };
 
@@ -44,7 +44,7 @@ export default function InstaFoodHome() {
           Instafood
         </div>
         <nav className="flex space-x-4 text-sm font-semibold text-white sm:space-x-8 sm:text-base">
-          <a href="/i" className="hover:text-[#b08d57] transition-colors">Home</a>
+          <a href="/" className="hover:text-[#b08d57] transition-colors">landing</a>
           <a href="/si" className="hover:text-[#b08d57] transition-colors">Services</a>
           <a href="/k" className="hover:text-[#b08d57] transition-colors">About</a>
           <a href="/di" className="hover:text-[#b08d57] transition-colors">Contact</a>
