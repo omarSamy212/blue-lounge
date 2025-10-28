@@ -219,50 +219,36 @@ export default function InstaFoodHome() {
         </a>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-10 mt-24 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
-        <h3
-          className="text-[#b08d57] text-lg font-dancing mb-6"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
-        >
+      {/* Footer */}
+      <footer className="relative py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/assets/photo_5764642634851879892_x.png"
+            alt="Blue Lounge Logo"
+            className="object-contain w-24 h-auto filter brightness-90 drop-shadow-lg"
+            style={{ maxWidth: "120px" }}
+          />
+        </div>
+
+        <h3 className="text-[#b08d57] text-lg font-dancing mb-6" style={{ fontFamily: "'Dancing Script', cursive" }}>
           Follow us for daily food inspirations 🍽️
         </h3>
 
         <div className="flex justify-center gap-8 mb-6">
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/201001688655"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125"
-            title="Chat on WhatsApp"
-          >
+          <a href="https://wa.me/201001688655" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125" title="Chat on WhatsApp">
             <i className="text-2xl fab fa-whatsapp"></i>
           </a>
-
-          {/* Facebook */}
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125"
-            title="Visit our Facebook"
-          >
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125" title="Visit our Facebook">
             <i className="text-2xl fab fa-facebook-f"></i>
           </a>
-
-          {/* Gmail */}
-          <a
-            href="mailto:instafood@outlook.com"
-            className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125"
-            title="Send us an Email"
-          >
+          <a href="mailto:instafood@outlook.com" className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125" title="Send us an Email">
             <i className="text-2xl fas fa-envelope"></i>
           </a>
         </div>
 
-        <p>© 2025 Instafood. All Rights Reserved.</p>
+        <p>© 2025 Blue Lounge. All Rights Reserved.</p>
       </footer>
+
 
       {/* Side Chat-Like PDF Button in Black and White */}
       <button
