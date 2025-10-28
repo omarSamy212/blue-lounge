@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars  
 import { motion } from "framer-motion";
 
 const sliderImages = [
@@ -47,6 +47,7 @@ const containerVariants = {
 
 export default function BlueLoungeUltraFancy() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,7 +65,7 @@ export default function BlueLoungeUltraFancy() {
 
   return (
     <div className="min-h-screen px-4 mx-auto overflow-x-hidden text-white bg-black sm:px-6 md:px-8 font-poppins max-w-7xl">
-      {/* Import fonts from Google Fonts */}
+      {/* Import fonts */}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap');
@@ -72,70 +73,103 @@ export default function BlueLoungeUltraFancy() {
           .font-dancing-script { font-family: 'Dancing Script', cursive; }
         `}
       </style>
+{/* HEADER */}
+<header className="fixed inset-x-0 top-0 z-50 bg-black/70 backdrop-blur-[6px] border-b border-white/10 flex justify-between items-center px-4 sm:px-6 py-4">
+  {/* Logo / Title */}
+  <div
+    className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide select-none text-[#b08d57] font-dancing"
+    style={{
+      fontFamily: "'Dancing Script', cursive",
+      textShadow: "0 0 10px rgba(176,141,87,0.5)",
+    }}
+  >
+    {mainTitle}
+  </div>
 
-      {/* HEADER */}
-      <header className="fixed inset-x-0 top-0 z-50 bg-black/70 backdrop-blur-[6px] border-b border-white/10 flex justify-between items-center px-4 sm:px-6 py-4">
-        <div
-          className="text-xl font-extrabold tracking-tight uppercase select-none sm:text-2xl md:text-3xl"
-          style={{ fontFamily: "'Brush Script MT', cursive" }}
-        >
-          {mainTitle}
-        </div>
-        <nav className="flex space-x-4 text-sm font-semibold sm:space-x-6 md:text-base">
-          <a href="/" className="transition-colors hover:text-gray-300">Landing</a>
-          <a href="/s" className="transition-colors hover:text-gray-300">Services</a>
-          <a href="/a" className="transition-colors hover:text-gray-300">About</a>
-          <a href="/c" className="transition-colors hover:text-gray-300">Contact</a>
-        </nav>
-      </header>
+  {/* Desktop Nav */}
+  <nav className="hidden space-x-6 text-sm font-medium md:flex">
+    <a href="/" className="transition-colors hover:text-[#b08d57]">Landing</a>
+    <a href="/s" className="transition-colors hover:text-[#b08d57]">Services</a>
+    <a href="/a" className="transition-colors hover:text-[#b08d57]">About</a>
+    <a href="/c" className="transition-colors hover:text-[#b08d57]">Contact</a>
+  </nav>
+
+  {/* Mobile Menu Button */}
+  <button
+    className="text-3xl text-[#b08d57] md:hidden focus:outline-none"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    {menuOpen ? "✖" : "☰"}
+  </button>
+
+  {/* Mobile Dropdown Menu */}
+  {menuOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      className="absolute left-0 right-0 flex flex-col items-center py-6 space-y-4 border-t top-16 bg-black/95 border-white/10 md:hidden"
+    >
+      <a href="/" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>Landing</a>
+      <a href="/s" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>Services</a>
+      <a href="/a" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>About</a>
+      <a href="/c" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>Contact</a>
+    </motion.div>
+  )}
+</header>
+
 
       <div className="h-20"></div>
 
-      {/* HERO */}
-      <section className="h-[80vh] md:h-[94vh] relative flex flex-col justify-center items-center text-center overflow-hidden px-4">
-        <motion.img
-          src={backgroundImage}
-          alt="hero background"
-          className="absolute inset-0 w-full h-full object-cover opacity-30 blur-[1.5px] scale-105"
-          initial={{ scale: 1 }}
-          animate={{ scale: [1.04, 1, 1.06, 1.04] }}
-          transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-black/96" />
-        <div className="z-10 max-w-4xl pt-24 md:pt-36">
-          <h1
-            className="mb-4 text-4xl font-extrabold tracking-widest uppercase sm:mb-6 sm:text-5xl md:text-7xl"
-            style={{ fontFamily: "'Brush Script MT', cursive" }}
-          >
-            {mainTitle}
-          </h1>
-          <motion.h2
-            className="mb-6 text-xl font-medium sm:mb-8 sm:text-2xl md:text-4xl text-white/90"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.2 }}
-          >
-            Catering Excellence
-          </motion.h2>
-          <motion.p
-            className="max-w-xl mx-auto mb-4 text-sm sm:mb-6 sm:text-base md:text-xl text-white/80"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-          >
-            Join us for a meal to remember!
-          </motion.p>
-          <button className="px-6 py-2 mt-4 text-sm font-bold transition duration-300 border-2 border-white rounded-full shadow-lg sm:px-8 md:px-12 sm:py-3 sm:mt-6 sm:text-base md:text-lg bg-black/70 hover:bg-white hover:text-black hover:border-black focus:outline-none">
-            <span className="transition group-hover:invert">Explore our Menu</span>
-          </button>
-        </div>
-      </section>
+{/* HERO */}
+<section className="h-[80vh] md:h-[94vh] relative flex flex-col justify-center items-center text-center overflow-hidden px-4">
+  <motion.img
+    src={backgroundImage}
+    alt="hero background"
+    className="absolute inset-0 w-full h-full object-cover opacity-30 blur-[1.5px] scale-105"
+    animate={{ scale: [1.04, 1, 1.06, 1.04] }}
+    transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-black/96" />
+
+  <div className="z-10 max-w-4xl pt-24 md:pt-36">
+    <h1
+      className="mb-4 text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-widest select-none text-[#b08d57] font-dancing"
+      style={{
+        fontFamily: "'Dancing Script', cursive",
+        textShadow: "0 0 15px rgba(176, 141, 87, 0.4)",
+      }}
+    >
+      {mainTitle}
+    </h1>
+
+    <motion.h2
+      className="mb-6 text-lg font-medium sm:text-2xl md:text-4xl sm:mb-8 text-white/90"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, delay: 0.2 }}
+    >
+      Catering Excellence
+    </motion.h2>
+
+    <motion.p
+      className="max-w-xl mx-auto mb-4 text-sm sm:text-base md:text-xl text-white/80"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, delay: 0.3 }}
+    >
+      Join us for a meal to remember!
+    </motion.p>
+
+    <button className="px-6 py-2 mt-4 text-sm font-bold transition duration-300 border-2 border-white rounded-full shadow-lg sm:px-8 md:px-12 sm:py-3 sm:mt-6 sm:text-base md:text-lg bg-black/70 hover:bg-white hover:text-black hover:border-black focus:outline-none">
+      Explore our Menu
+    </button>
+  </div>
+</section>
+
 
       {/* SLIDER */}
-      <section
-        className="relative w-full max-w-5xl mx-auto my-12 overflow-hidden border shadow-2xl rounded-3xl border-white/10"
-        id="menu"
-      >
+      <section className="relative w-full max-w-5xl mx-auto my-12 overflow-hidden border shadow-2xl rounded-3xl border-white/10" id="menu">
         {sliderImages.map((img, idx) => (
           <motion.img
             key={idx}
@@ -150,36 +184,8 @@ export default function BlueLoungeUltraFancy() {
             transition={{ duration: 1 }}
           />
         ))}
-        <button
-          onClick={() =>
-            setCurrentSlide(
-              (currentSlide + sliderImages.length - 1) % sliderImages.length
-            )
-          }
-          className="absolute z-20 p-2 text-3xl text-white transform -translate-y-1/2 rounded-full left-4 top-1/2 sm:text-4xl bg-black/70 hover:bg-gray-700"
-        >
-          ‹
-        </button>
-        <button
-          onClick={() => setCurrentSlide((currentSlide + 1) % sliderImages.length)}
-          className="absolute z-20 p-2 text-3xl text-white transform -translate-y-1/2 rounded-full right-4 top-1/2 sm:text-4xl bg-black/70 hover:bg-gray-700"
-        >
-          ›
-        </button>
-        <div className="absolute flex space-x-2 transform -translate-x-1/2 bottom-4 left-1/2">
-          {sliderImages.map((_, i) => (
-            <span
-              key={i}
-              onClick={() => setCurrentSlide(i)}
-              className={`w-3 h-3 rounded-full cursor-pointer border-2 ${
-                currentSlide === i ? "bg-white" : "bg-gray-600 border-gray-400"
-              }`}
-            />
-          ))}
-        </div>
       </section>
-
-      {/* Alternating Image/Text Grid */}
+            {/* Alternating Image/Text Grid */}
       <section className="max-w-6xl px-4 mx-auto space-y-20" id="gallery">
         {dishes.map((dish, i) => (
           <motion.div
@@ -239,15 +245,13 @@ export default function BlueLoungeUltraFancy() {
           In the summer of 2019, we brought smiles to Dragon Island/Livios Sidi Abd El-Rahman with a small shack offering waffles, crepes, and children's happy meals.
         </motion.p>
       </section>
-
-      {/* Footer */}
+      {/* FOOTER */}
       <footer className="relative py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
         <div className="flex justify-center mb-6">
           <img
             src="/assets/photo_5764642634851879887_y.png"
             alt="Blue Lounge Logo"
             className="object-contain w-24 h-auto filter brightness-90 drop-shadow-lg"
-            style={{ maxWidth: "120px" }}
           />
         </div>
 
@@ -256,13 +260,13 @@ export default function BlueLoungeUltraFancy() {
         </h3>
 
         <div className="flex justify-center gap-8 mb-6">
-          <a href="https://wa.me/201001688655" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125" title="Chat on WhatsApp">
+          <a href="https://wa.me/201001688655" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125">
             <i className="text-2xl fab fa-whatsapp"></i>
           </a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125" title="Visit our Facebook">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125">
             <i className="text-2xl fab fa-facebook-f"></i>
           </a>
-          <a href="mailto:instafood@outlook.com" className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125" title="Send us an Email">
+          <a href="mailto:instafood@outlook.com" className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125">
             <i className="text-2xl fas fa-envelope"></i>
           </a>
         </div>
@@ -270,28 +274,17 @@ export default function BlueLoungeUltraFancy() {
         <p>© 2025 Blue Lounge. All Rights Reserved.</p>
       </footer>
 
-      {/* Side Chat-Like PDF Button in Black and White */}
+      {/* Floating Button */}
       <button
         onClick={handlePdfClick}
         aria-label="Download PDF Menu"
-        className="fixed z-50 flex items-center justify-center text-white transition duration-300 bg-black rounded-full shadow-lg right-4 bottom-24 w-14 h-14 hover:bg-white hover:text-black"
-        style={{ boxShadow: "0 4px 8px rgba(0,0,0,0.5)" }}
+        className="fixed z-50 flex items-center justify-center w-auto px-5 space-x-3 text-white transition duration-300 bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-full shadow-lg right-4 bottom-24 h-14 hover:from-white hover:via-white hover:to-white hover:text-black focus:outline-none focus:ring-4 focus:ring-[#b08d57]/60 select-none"
+        style={{ boxShadow: "0 6px 15px rgba(176,141,87,0.5)" }}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 12v6m0 0l-3-3m3 3l3-3m6-9H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2z"
-          />
-        </svg>
+        <span className="text-sm font-semibold tracking-wide">download portfolio</span>
       </button>
     </div>
   );
 }
+
+

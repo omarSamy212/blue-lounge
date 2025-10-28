@@ -1,6 +1,6 @@
 // InstaFoodServices.jsx
 import React from "react";
-// eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars  
 import { motion } from "framer-motion";
 
 const servicesIndividuals = [
@@ -54,38 +54,54 @@ const servicesCorporate = [
   },
 ];
 
+const clients = [
+  "/assets/28.10.2025_17.10.06_REC.png",
+  "/assets/28.10.2025_17.10.20_REC.png"
+];
+
 export default function InstaFoodServices() {
   return (
-    <div className="min-h-screen px-6 pb-24 overflow-x-hidden text-white bg-gradient-to-b from-black to-gray-900 md:px-10 font-poppins">
+  <div className="min-h-screen px-6 pb-24 overflow-x-hidden text-white bg-black md:px-10 font-poppins">
+
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
 
           .font-poppins { font-family: 'Poppins', sans-serif; }
-          .font-dancing { font-family: 'Dancing+Script', cursive; }
+          .font-dancing { font-family: 'Dancing Script', cursive; }
+
+          @keyframes rotateSlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+
+          .rotate-slow {
+            animation: rotateSlow 20s linear infinite;
+          }
         `}
       </style>
 
-<header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-[#b08d57]/20 flex flex-wrap justify-between items-center px-4 sm:px-8 md:px-12 py-4 gap-y-2">
-  <h1
-    className="flex-1 min-w-[150px] text-2xl sm:text-3xl md:text-4xl font-dancing text-[#b08d57] select-none"
-    style={{ fontFamily: "'Dancing Script', cursive" }}
-  >
-    Instafood
-  </h1>
-  <nav className="flex flex-wrap justify-center flex-1 gap-4 text-sm font-semibold basis-full md:basis-auto md:flex-auto md:gap-8 md:text-base md:justify-end">
-    <a href="/i" className="hover:text-[#b08d57] transition">Home</a>
-    <a href="/si" className="hover:text-[#b08d57] transition">Services</a>
-    <a href="/k" className="hover:text-[#b08d57] transition">About</a>
-    <a href="/di" className="text-[#b08d57] underline underline-offset-4">Contact</a>
-    <a
-      href="/"
-      className="ml-0 md:ml-4 px-4 py-2 border border-[#b08d57]/50 rounded-full hover:bg-[#b08d57] hover:text-black transition text-sm"
-    >
-      Back to landing
-    </a>
-  </nav>
-</header>
+      {/* HEADER */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-[#b08d57]/20 flex flex-wrap justify-between items-center px-4 sm:px-8 md:px-12 py-4 gap-y-2">
+        <h1
+          className="flex-1 min-w-[150px] text-2xl sm:text-3xl md:text-4xl font-dancing text-[#b08d57] select-none"
+          style={{ fontFamily: "'Dancing Script', cursive" }}
+        >
+          Instafood
+        </h1>
+        <nav className="flex flex-wrap justify-center flex-1 gap-4 text-sm font-semibold basis-full md:basis-auto md:flex-auto md:gap-8 md:text-base md:justify-end">
+          <a href="/i" className="hover:text-[#b08d57] transition">Home</a>
+          <a href="/si" className="text-[#b08d57] underline underline-offset-4">Services</a>
+          <a href="/k" className="hover:text-[#b08d57] transition">About</a>
+          <a href="/di" className="hover:text-[#b08d57] transition">Contact</a>
+          <a
+            href="/"
+            className="ml-0 md:ml-4 px-4 py-2 border border-[#b08d57]/50 rounded-full hover:bg-[#b08d57] hover:text-black transition text-sm"
+          >
+            Back to landing
+          </a>
+        </nav>
+      </header>
 
       <div className="h-24"></div>
 
@@ -178,41 +194,48 @@ export default function InstaFoodServices() {
         </div>
       </section>
 
+      {/* CLIENTS SECTION */}
+      <section className="max-w-5xl mx-auto mt-32 text-center">
+        <motion.h2
+          className="text-4xl md:text-5xl font-dancing mb-10 text-[#b08d57]"
+          style={{ fontFamily: "'Dancing Script', cursive" }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Our Happy Clients
+        </motion.h2>
+
+        <div className="flex flex-wrap justify-center gap-10">
+          {clients.map((client, i) => (
+            <motion.img
+              key={i}
+              src={client}
+              alt={`Client ${i + 1}`}
+              className="w-28 h-28 object-cover rounded-full border-2 border-[#b08d57] shadow-md rotate-slow"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: i * 0.2 }}
+            />
+          ))}
+        </div>
+      </section>
+
       {/* FOOTER */}
-    <footer className="py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
+      <footer className="py-10 mt-32 text-sm text-center bg-black border-t bg-opacity-90 border-white/20 text-white/70">
         <h3 className="text-[#b08d57] text-lg font-dancing mb-6" style={{ fontFamily: "'Dancing Script', cursive" }}>
           Follow us for daily food inspirations 🍽️
         </h3>
 
         <div className="flex justify-center gap-8 mb-6">
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/201001688655"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125"
-            title="Chat on WhatsApp"
-          >
+          <a href="https://wa.me/201001688655" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-green-500 transition-transform transform hover:scale-125" title="Chat on WhatsApp">
             <i className="text-2xl fab fa-whatsapp"></i>
           </a>
-
-          {/* Facebook */}
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125"
-            title="Visit our Facebook"
-          >
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-[#b08d57] hover:text-blue-500 transition-transform transform hover:scale-125" title="Visit our Facebook">
             <i className="text-2xl fab fa-facebook-f"></i>
           </a>
-
-          {/* Gmail */}
-          <a
-            href="mailto:instafood@outlook.com"
-            className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125"
-            title="Send us an Email"
-          >
+          <a href="mailto:instafood@outlook.com" className="text-[#b08d57] hover:text-red-500 transition-transform transform hover:scale-125" title="Send us an Email">
             <i className="text-2xl fas fa-envelope"></i>
           </a>
         </div>

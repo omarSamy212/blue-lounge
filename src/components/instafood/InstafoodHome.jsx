@@ -24,6 +24,7 @@ export default function InstaFoodHome() {
     const pdfUrl = "/InstaFood portfolio.pdf";
     window.open(pdfUrl, "_blank");
   };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen px-4 mx-auto overflow-x-hidden text-white bg-black font-poppins sm:px-6 md:px-8 max-w-7xl">
@@ -34,22 +35,51 @@ export default function InstaFoodHome() {
           .font-dancing { font-family: 'Dancing Script', cursive; }
         `}
       </style>
-
       {/* HEADER */}
       <header className="fixed inset-x-0 top-0 z-50 bg-black/70 backdrop-blur-[6px] border-b border-white/10 flex justify-between items-center px-4 sm:px-6 py-4">
+        {/* Title */}
         <div
-          className="text-2xl sm:text-3xl font-extrabold tracking-tight uppercase select-none font-dancing text-[#b08d57]"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
+          className="text-2xl sm:text-3xl font-extrabold tracking-tight select-none text-[#b08d57] font-dancing"
+          style={{
+            fontFamily: "'Dancing Script', cursive",
+            textShadow: "0 0 8px rgba(176,141,87,0.4)",
+          }}
         >
           Instafood
         </div>
-        <nav className="flex space-x-4 text-sm font-semibold text-white sm:space-x-8 sm:text-base">
-          <a href="/" className="hover:text-[#b08d57] transition-colors">landing</a>
+
+        {/* Desktop Nav */}
+        <nav className="hidden space-x-6 text-sm font-semibold text-white md:flex sm:space-x-8 sm:text-base">
+          <a href="/" className="hover:text-[#b08d57] transition-colors">Landing</a>
           <a href="/si" className="hover:text-[#b08d57] transition-colors">Services</a>
           <a href="/k" className="hover:text-[#b08d57] transition-colors">About</a>
           <a href="/di" className="hover:text-[#b08d57] transition-colors">Contact</a>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="text-3xl text-[#b08d57] md:hidden focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✖" : "☰"}
+        </button>
+
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute left-0 right-0 flex flex-col items-center py-6 space-y-4 border-t top-16 bg-black/95 border-white/10 md:hidden"
+          >
+            <a href="/" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>Landing</a>
+            <a href="/si" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="/k" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="/di" className="text-white hover:text-[#b08d57]" onClick={() => setMenuOpen(false)}>Contact</a>
+          </motion.div>
+        )}
       </header>
+
 
       <div className="h-20"></div>
 
@@ -87,9 +117,7 @@ export default function InstaFoodHome() {
           >
             Bringing health and taste together — every bite, a story of quality and care.
           </motion.p>
-          <button className="px-8 py-2 text-base font-bold transition duration-300 border-2 border-white rounded-full shadow-lg group sm:px-12 sm:py-3 sm:text-lg bg-black/60 hover:bg-white hover:text-black hover:border-black">
-            <span className="transition group-hover:invert">Explore Menu</span>
-          </button>
+
         </div>
       </section>
 
@@ -133,9 +161,8 @@ export default function InstaFoodHome() {
             <span
               key={i}
               onClick={() => setCurrentSlide(i)}
-              className={`w-3 h-3 rounded-full cursor-pointer border-2 ${
-                currentSlide === i ? "bg-white" : "bg-gray-600 border-gray-400"
-              }`}
+              className={`w-3 h-3 rounded-full cursor-pointer border-2 ${currentSlide === i ? "bg-white" : "bg-gray-600 border-gray-400"
+                }`}
             />
           ))}
         </div>
@@ -249,28 +276,14 @@ export default function InstaFoodHome() {
         <p>© 2025 Blue Lounge. All Rights Reserved.</p>
       </footer>
 
-
-      {/* Side Chat-Like PDF Button in Black and White */}
+      {/* Floating Button */}
       <button
         onClick={handlePdfClick}
         aria-label="Download PDF Menu"
-        className="fixed z-50 flex items-center justify-center text-white transition duration-300 bg-black rounded-full shadow-lg right-4 bottom-24 w-14 h-14 hover:bg-white hover:text-black"
-        style={{ boxShadow: "0 4px 8px rgba(0,0,0,0.5)" }}
+        className="fixed z-50 flex items-center justify-center w-auto px-5 space-x-3 text-white transition duration-300 bg-gradient-to-r from-gray-800 via-gray-900 to-black rounded-full shadow-lg right-4 bottom-24 h-14 hover:from-white hover:via-white hover:to-white hover:text-black focus:outline-none focus:ring-4 focus:ring-[#b08d57]/60 select-none"
+        style={{ boxShadow: "0 6px 15px rgba(176,141,87,0.5)" }}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 12v6m0 0l-3-3m3 3l3-3m6-9H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2z"
-          />
-        </svg>
+        <span className="text-sm font-semibold tracking-wide">download portfolio</span>
       </button>
     </div>
   );
