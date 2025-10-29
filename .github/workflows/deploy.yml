@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
 
       - name: Install dependencies
         run: npm ci
@@ -29,5 +29,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./dist
-          single_commit: true
+          # optional: control commit message or author
+          # commit_message: "Deploy site via GitHub Actions"
+          # user_name: "github-actions[bot]"
+          # user_email: "github-actions[bot]@users.noreply.github.com"
+          # Do create CNAME on the published branch so Pages keeps your custom domain:
           cname: bluelounge4catering.com
